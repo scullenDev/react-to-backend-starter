@@ -23,6 +23,7 @@ const ContactForm = ({
           placeholder="New"
           onChange={handleInputChange}
           value={firstName}
+          required
         />
       </FormGroup>
       <FormGroup>
@@ -34,11 +35,15 @@ const ContactForm = ({
           placeholder="Contact"
           onChange={handleInputChange}
           value={lastName}
+          required
         />
       </FormGroup>
       <FormGroup>
         <Label for="type">Contact Type:</Label>
-        <Input type="select" name="type" id="type" onChange={handleInputChange}>
+        <Input type="select" name="type" id="type" onChange={handleInputChange} defaultValue="disabled">
+          <option value="disabled" disabled="disabled">
+            Select Category
+          </option>
           <option value="Personal">Personal</option>
           <option value="Business">Business</option>
         </Input>
@@ -52,6 +57,7 @@ const ContactForm = ({
           placeholder="(222) 333-4444"
           onChange={handleInputChange}
           value={phoneNumber}
+          required
         />
       </FormGroup>
       <FormGroup>
@@ -63,6 +69,7 @@ const ContactForm = ({
           placeholder="new@contact.com"
           onChange={handleInputChange}
           value={email}
+          required
         />
       </FormGroup>
       <Button block color="primary" className="mt-4" disabled={!firstName || !lastName || !email}>
