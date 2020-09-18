@@ -3,6 +3,14 @@ h1 {
   font-weight: 700;
 }
 
+.btn.btn-secondary {
+  background-color: #4d4b4a;
+}
+
+.btn.btn.btn-secondary:hover {
+  background-color: #3c3c3b;
+}
+
 .navbar.bg-dark {
   padding-right: 50px;
   padding-left: 50px;
