@@ -8,9 +8,25 @@ h1 {
   padding-left: 50px;
 }
 
+.navbar-brand {
+  font-weight: 700;
+}
+
+.table {
+  table-layout: fixed;
+}
+
 .table.table-hover tbody tr:hover {
   background-color: rgb(228, 237, 246);
   cursor: pointer;
+}
+
+#emailCol {
+  width: 275px;
+}
+
+#deleteCol {
+  width: 35px;
 }
 
 .fa-times {

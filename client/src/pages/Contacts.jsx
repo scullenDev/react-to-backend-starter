@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useReducer } from "react";
-import { useParams } from "react-router-dom";
-import { FormGroup, Label, Input } from "reactstrap";
+import { useHistory } from "react-router-dom";
+import { FormGroup, Label, Input, Button } from "reactstrap";
 import API from "../utils/API";
 import { ContactTable, ContactRow } from "../components/ContactTable";
 
 const Contacts = () => {
-  // const { type: contactType } = useParams("");
+  const history = useHistory();
   const [type, setType] = useState("");
   const [contacts, setContacts] = useState([]);
 
@@ -27,7 +27,18 @@ const Contacts = () => {
 
   return (
     <>
-      <h1 className="mt-4 mb-4">Your {type} Contacts:</h1>
+      <div className="d-flex justify-content-between align-items-center">
+        <h1 className="mt-4 mb-4">Your {type} Contacts:</h1>
+        <Button
+          color="primary"
+          onClick={(e) => {
+            e.preventDefault();
+            history.push("/add");
+          }}
+        >
+          Add New Contact
+        </Button>
+      </div>
       <FormGroup>
         <Label for="contactType" hidden>
           Filter by Contact Type:

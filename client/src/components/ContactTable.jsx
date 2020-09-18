@@ -10,8 +10,8 @@ export const ContactTable = ({ children }) => (
           <th>Last Name</th>
           <th>Contact Type</th>
           <th>Phone Number</th>
-          <th>Email Address</th>
-          <th>Delete?</th>
+          <th id="emailCol">Email Address</th>
+          <th id="deleteCol"></th>
         </tr>
       </thead>
       <tbody>{children}</tbody>
