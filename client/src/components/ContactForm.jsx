@@ -26,7 +26,7 @@ const ContactForm = ({
         />
       </FormGroup>
       <FormGroup>
-        <Label for="lastName">Email:</Label>
+        <Label for="lastName">Last Name:</Label>
         <Input
           type="text"
           name="lastName"
