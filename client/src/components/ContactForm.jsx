@@ -42,7 +42,7 @@ const ContactForm = ({
         <Label for="type">Contact Type:</Label>
         <Input type="select" name="type" id="type" onChange={handleInputChange} defaultValue="disabled">
           <option value="disabled" disabled="disabled">
-            Select Category
+            Select a Contact Type
           </option>
           <option value="Personal">Personal</option>
           <option value="Business">Business</option>
