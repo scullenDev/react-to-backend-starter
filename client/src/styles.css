@@ -1,0 +1,23 @@
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.navbar.bg-dark {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.table.table-hover tbody tr:hover {
+  background-color: rgb(228, 237, 246);
+  cursor: pointer;
+}
+
+.fa-times {
+  color: red;
+}
+
+.fa-times:hover {
+  color: darkred;
+  cursor: pointer;
+}
