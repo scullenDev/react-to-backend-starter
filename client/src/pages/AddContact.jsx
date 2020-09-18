@@ -25,19 +25,8 @@ const AddContact = () => {
     setContact({ ...contact, [name]: value });
   };
 
-  const addContact = (e) => {
-    e.preventDefault();
-    API.addContact(contact)
-      .then(() => {
-        history.push("/contacts");
-      })
-      .catch((err) => {
-        setError({
-          isError: true,
-          message: err.response.data.join(", "),
-          type: "danger",
-        });
-      });
+  const addContact = () => {
+    // TODO: determine how to add a new contact in the db and take the user to /contacts
   };
 
   return (

@@ -10,9 +10,7 @@ const Contacts = () => {
   const [contacts, setContacts] = useState([]);
 
   const getContacts = () => {
-    API.getContacts(type)
-      .then((res) => setContacts(res.data))
-      .catch((err) => console.log(err));
+    // TODO: determine how to get all contacts from the backend and save in state
   };
 
   useEffect(() => {
@@ -20,9 +18,7 @@ const Contacts = () => {
   }, [type]);
 
   const deleteContact = (id) => {
-    API.deleteContact(id)
-      .then(() => getContacts())
-      .catch((err) => console.log(err));
+    // TODO: determine how to delete the contact with the provided id and reload the updated contacts list
   };
 
   return (
